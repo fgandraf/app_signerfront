@@ -3,47 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Signer</title>
+    <title>LECOM - Gerador de Requisições</title>
 </head>
-<body class="font-[Montserrat]">
-    <main class="h-[100vh] flex bg-[url(/assets/background.png)] justify-center items-center">
-        <div id="container" class="relative bg-[#f8faff5a] w-[35vw] h-[70vh] box-border rounded-[40px] shadow-sm shadow-gray-500/50 flex flex-col justify-center p-[2%]">
-            <div id="header" class="flex flex-col w-full items-center justify-center  border-b border-[#66bc99]">
-                <img src="assets/logo_icon.svg" alt="Lecom logo" class="box-border h-[100px] w-[100px] absolute top-[-50px] left-[43%]">
-                <h1 class="text-base pt-12">Portal do Cliente</h1>
-                <h1 class="text-2xl font-semibold pb-6">Gerador de Requisições</h1>
+<body>
+    <main>
+        <div id="container">
+            <div id="container__header">
+                <div id="header__logo"></div>
+                <h1>Portal do Cliente</h1>
+                <h2>Gerador de Requisições</h1>
             </div>
-            <div id="body" class="h-[70%] w-full flex flex-col w-full items-center p-12 gap-8 justify-center">
-                <div id="certificadoItem" class="w-full">
-                    <label for="certificadoField" class="pl-2 text-sm pb-1 text-slate-500">Certificado Digital A1:</>
-                    <div class="flex bg-white rounded-xl h-[50px] items-center">
-                        <i class="text-[1.5rem] material-symbols-outlined self-center pl-4 pr-2">docs</i>
-                        <p id="fileText" class="bg-transparent pl-2 pr-4 flex-grow text-slate-400">Selecione um arquivo</p>
-                        <label id="uploadButton" class="h-full w-[50px] flex bg-sky-300 justify-center items-center rounded-r-xl border-l hover:bg-sky-600 cursor-pointer hover:text-white transition-colors">
-                            <input type="file" class="hidden"> 
-                            <span class="material-symbols-outlined font-light">upload</span>
-                        </label>
+            <div id="container__body">
+                <div class="field_container">
+                    <label>Certificado Digital A1 (.pfx):</label>
+                    <div class="field_item">
+                        <i class="leading_icon material-symbols-outlined">docs</i>
+                        <span class="field_placeholder">Selecione um arquivo</span>
+                        
+                        <label id="uploadButton"> 
+                            <input id="input_file" type="file" class="hidden"> 
+                            <i class="trailing_icon material-symbols-outlined">upload</i>
+                        </label> 
                     </div>
                 </div>
-                <div id="senhaItem" class="w-full">
-                    <label for="senhaField" class="pl-2 text-sm pb-1 text-slate-500">Senha:</>
-                    <div class="grid grid-cols-[35px,auto] bg-white p-4 rounded-xl h-[50px]">
-                        <i class="text-[1.5rem] material-symbols-outlined self-center">lock</i>
-                        <input id="senhaField" type="password" placeholder="Digite a senha" class="placeholder-slate-400 outline-none bg-transparent">
+                <div class="field_container">
+                    <label>Senha:</label>
+                    <div class="field_item">
+                        <i class="leading_icon material-symbols-outlined">lock</i>
+                        <input id="passwordField" type="password" placeholder="Digite a senha">
                     </div>
-                </div>
-                <a id="startButtom" href="#" class="mt-8 w-full h-12 bg-sky-300 hover:bg-sky-600 my-2 rounded-xl p-2 flex justify-center items-center text-slate-700 hover:text-white transition-colors">Iniciar</a>
+                </div> 
+                <a id="startButton" href="#">Iniciar</a>
             </div>
-            <div id="footer" class="relative h-[10%] border-t flex justify-center items-center border-[#66bc99]">
-                <p class="hidden">Aqui serão os logs</p>
+
+            <div id="footer">
+                <p id="log">Aqui serão os logs</p>
             </div>
+
         </div>
     </main>
-    <script src="scripts.js"></script>
 </body>
 </html>
+
+
+
+
+
+                
+
+
+
+
+            <!-- </div>
+            
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html> -->
